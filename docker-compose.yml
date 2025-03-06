@@ -1,9 +1,9 @@
 services:
   db:
     image: postgres:16.3
-    container_name: postgres-db-rag
+    container_name: postgres-db-studiosync
     environment:
-      POSTGRES_DB: rag1
+      POSTGRES_DB: studiosync
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: adminpassword
     volumes:
