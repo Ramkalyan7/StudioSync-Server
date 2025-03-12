@@ -41,7 +41,8 @@ func (app *application) mount()http.Handler{
 	r.Route("/v1",func(r chi.Router) {
 		r.Get("/health",app.healthCheckHandler)
 		r.Route("/auth",func(r chi.Router) {
-			r.Post("/register,",app.RegisterUser);
+			r.Post("/register",app.RegisterUser);
+			r.Post("/login",app.LoginUser);
 		})
 	});
 

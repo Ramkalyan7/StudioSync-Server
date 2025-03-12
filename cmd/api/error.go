@@ -25,3 +25,8 @@ func (app *application) conflictResponse(w http.ResponseWriter, r *http.Request,
 	log.Printf("conflict error: %s path: %s error: %s", r.Method, r.URL.Path, err)
 	writeJSONError(w, http.StatusConflict, err.Error())
 }
+
+func (app *application) CustomErrorResponse(w http.ResponseWriter,r *http.Request,customError string){
+	log.Printf("conflict error: %s path: %s error: %s", r.Method, r.URL.Path, customError)
+	writeJSONError(w, http.StatusConflict,customError )
+}
